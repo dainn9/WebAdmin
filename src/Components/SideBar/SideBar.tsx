@@ -59,8 +59,8 @@ const SideBar = () => {
           <div className="w-16 h-16 bg-gray-700 rounded-full mb-2">
             <img src={logo} alt="" className={"rounded-full"} />
           </div>
-          <h2 className="text-lg font-semibold">Hồ Thành Đạt</h2>
-          <p className="text-sm text-gray-400">Administrator</p>
+          <h2 className="text-lg font-semibold">Administrator</h2>
+          {/* <p className="text-sm text-gray-400">Administrator</p> */}
         </div>
 
         {/* Sidebar Links */}

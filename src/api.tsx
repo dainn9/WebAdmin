@@ -59,9 +59,13 @@ export const getAllColors = async () => {
   }
 };
 
-export const getAllProvider = async () => {
+export const getAllProvider = async (token: string) => {
   try {
-    return await axios.get<Provider[]>(`${BASE_URL}/providers`);
+    return await axios.get<Provider[]>(`${BASE_URL}/providers`, {
+      headers: {
+        Authorization: `Bearer ${token}`, // Thay `accessToken` bằng giá trị token thực tế
+      },
+    });
   } catch {
     if (axios.isAxiosError(error)) {
       console.log(error.message);

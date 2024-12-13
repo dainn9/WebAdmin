@@ -89,7 +89,7 @@ const ProductForm: React.FC<Props> = ({ product, checkProduct }) => {
       );
       setSizes(fetchSizesResult);
 
-      const fetchProvidersResult = await getAllProvider().then(
+      const fetchProvidersResult = await getAllProvider(user.accessToken).then(
         (data) => data?.data || []
       );
       setProviders(fetchProvidersResult);
